@@ -1,0 +1,19 @@
+1. 
+title: Is there a way to query an OpenBSD package by description?
+
+url: https://unix.stackexchange.com/questions/335259/is-there-a-way-to-query-an-openbsd-package-by-description
+
+question: [In OpenBSD's package manager, I was hoping it was possible to search by keyword in the packages comment/description section, not just by package name.]
+
+answer: [ $ find /usr/ports -type f -name 'DESCR*' -exec grep "something" {} +]
+
+[ $ grep "something" /usr/ports/INDEX
+]
+
+[  $ cd /usr/ports
+   $ make search key=language
+]
+
+[ $ pkg_info -Q pkglocate
+  $ pkglocate pkg_info
+]
