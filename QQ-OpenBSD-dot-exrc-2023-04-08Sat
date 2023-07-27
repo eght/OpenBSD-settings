@@ -1,0 +1,4 @@
+set autoprint
+set prompt
+set showmode
+set showmatch

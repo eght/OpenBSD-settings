@@ -1,0 +1,66 @@
+XTerm*loginShell:true
+
+XTerm*termName:xterm-256color
+XTerm*faceName:terminus:pixelsize=15
+XTerm*background:black
+XTerm*foreground:orange
+XTerm*pointerColor:red
+XTerm*pointerColorBackground:black
+XTerm*cursorColor:magenta
+XTerm*internalBorder:3
+XTerm*scrollBar:false
+XTerm*saveLines:4096
+
+! terminal colors
+XTerm*color0:#2e3436
+XTerm*color1:#cc0007
+XTerm*color2:#4e9a06
+XTerm*color3:#c4a000
+XTerm*color4:#3465a4
+XTerm*color5:#75507b
+XTerm*color6:#0b939b
+XTerm*color7:#d3d7cf
+XTerm*color8:#555753
+XTerm*color9:#ef2929
+XTerm*color10:#8ae234
+XTerm*color11:#fce94f
+XTerm*color12:#729fcf
+XTerm*color13:#ad7fa8
+XTerm*color14:#00f5e9
+XTerm*color15:#eeeeec
+
+XTerm*cursorBlink:true
+
+!xscreensave.timeout:10
+!xscreensave.cycle:5
+!xscreensave.nice:12
+!xscreensave.fadeSeconds:2
+
+!XClock*width:768
+!XClock*height:1280
+XClock*update:1
+!XClock*analog:false
+XClock*render:true
+XClock*reverseVideo:true
+!XClock*foreground:DarkSlateGray
+!XClock*background:White
+!XClock*background:turquoise
+XClock*hands:Gray80
+XClock*foreground*hourColor:green2
+!XClock*hourColor:orange
+!XClock*hourColor:Linen
+XClock*hourColor:Cornsilk
+!XClock*minuteColor:Salmon
+XClock*minuteColor:Tomato
+XClock*secondColor:red
+XClock*majorColor:green2
+XClock*minorColor:blue
+
+! fix alt key input
+! xterm*metaSendsEscape:true
+XTerm*eightBitInput:false
+XTerm*altSendsEscape:true
+
+! To reread your .Xdefaults file,
+! and keep your old .Xdefaults:
+xrdb -merge .Xdefaults

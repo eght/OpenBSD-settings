@@ -1,0 +1,118 @@
+# $OpenBSD: dot.profile,v 1.4 2005/02/16 06:56:57 matthieu Exp $
+#
+# sh/ksh initialization
+
+PATH=$HOME/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin:/usr/games:.
+
+
+#website
+#http://www.bamweb.nl/computer/bsd/43
+#written by bart dorlandt sunday, 10 june 2007 15:54 
+#here you'll find the profile i created for openbsd. this profile is based on ksh. the first is the user profile, the second the root profile.
+
+#user profile
+###### Aliases #####
+alias c='echo "Clear the screen" && sleep 2.5 && clear'
+alias l='echo "ls -CFi" && sleep 2.5 && ls -CFi'
+alias la='echo "ls -lahFi" &&  sleep 1.5 && ls -lahFi'
+alias lat='echo "ls -lahtFi | head" && sleep 2.5 && ls -lahtFi| head'
+alias ll='echo "sleep 2.5 && ls -lhFi" && sleep 2.5 && ls -lhFi'
+alias llt='echo "sleep 2.5 && ls -lhtFi | head" && \
+	  sleep 2.5 && \
+	  ls -lhtFi | head'
+##################### colorls
+alias m='
+#        echo "(alias: m, ma, mat, md, mm, mmt)" && \
+#	 clear && \
+         echo "ls -CFiSh" && \
+	 sleep 2.5 &&
+         ls -CFiSh'
+#alias m='echo "colorls -CFiGSh" && colorls -CFiGSh'
+alias ma='echo "ls -lahFi" && \
+#	  sleep 1 && \
+#	  clear && \
+          sleep 2.5 &&
+          ls -lahFi'
+#alias ma='echo "colorls -lahFiG" && colorls -lahFiG'
+alias mat='echo "ls -lahtFi | head" && sleep 2.5 && ls -lahtFi | head'
+alias md='echo "ls -ld .*/" && sleep 2.5 && ls -ld .*/'
+#alias md='echo "colorls -ldG .*/" && colorls -ldG .*/'
+alias mm='echo "ls -lhFi" && sleep 2.5 && ls -lhFi'
+#alias mm='echo "colorls -lhFiG" && colorls -lhFiG'
+alias mmt='echo "ls -lhtFi | head" && sleep 1 && ls -lhtFi | head'
+alias aoeu='kbd us'
+alias asdf='kbd us.dvorak'
+alias sud='echo "sudo su -l root" && sudo su -l root'
+alias more="less"
+alias untar="tar xzpf"
+alias pstree="pstree -w"
+alias lock="lock -np"
+alias muppet="mutt -F ~/.muppetrc"
+####################################
+#xterm geometry
+#version one
+#centering for TCL
+alias xterm-80x24="xterm -fa 'Mono' -fs 15 -geometry 80x24 &"
+#version two
+#maximized frame for TCL
+alias xterm-72x26='sleep 3 && xterm -fa 'Mono' -fs 18 -geometry 72x26 &'
+#keyboard shortcuts
+alias hh='sleep 3 && xterm -fa 'Mono' -fs 20 -geometry 78x28+0+0 &'
+#alias tt='sleep 3 && xterm -fa 'Mono' -fs 24 -geometry 80x24+0+0 &'
+#alias tt='sleep 3 && xterm -fa 'Mono' -fs 28 -geometry 72x20+0+0 &'
+alias tt='sleep 3 && xterm -fa 'Mono' -fs 30 -geometry 72x20+0+0 &'
+#alias hh='sleep 3 && xterm -fa 'Mono' -fs 18 -geometry 80x28+30+70 &'
+#alias hh='echo xterm -fa 'Mono' -fs 18 -geometry 80x26 && sleep 3 && xterm -fa 'Mono' -fs 18 -geometry 80x26 &'
+#version three
+#font maximized for review english words
+alias xterm-11x4='xterm -fa 'Mono' -fs 108 -geometry 11x4'
+####################################
+PAGER=/usr/bin/less
+
+#### colored shell ####
+e=`printf "\033"`
+end="$e[0m"
+red="$e[1;31m"
+green="$e[1;32m"
+yellow="$e[1;33m"
+blue="$e[1;34m"
+magenta="$e[1;35m"
+darkcyan="$e[36m"
+
+unset e
+PS1='${darkcyan}$(jot -s "" -b "." ${COLUMNS})${end}
+${blue}$(id -un)@$(hostname)${end}: ${green}${PWD}${end} $(date "+%F %T")
+\$ \# ${red}$(fortune)${end}
+\! $? \j | \V | \@
+(alias: m, ma, mat, md, mm, mmt, c, l, la, lat, ll, llt)
+'
+############
+# PS1
+# \241\277 '
+###############
+# PS1 
+# \241\277\273\266
+################
+# PS1 smile face
+# \136\253\136 
+###############
+### Titlebar='\[\033]0;\U@\H:\W\007\]'
+
+#### PKG_PATH setting ####
+PKG_PATH=ftp://ftp.openbsd.org/pub/`uname -s`/`uname -r`/packages/`uname -m`/:ftp://ftp.nluug.nl/pub/`uname -s`/`uname -r`/packages/`uname -m`/:ftp://mirror.planetunix.net/pub/OpenBSD/`uname -r`/packages/`machine -a`/
+
+#### History (touch ~/.ksh_history) ####
+HISTFILE=~/.ksh_history
+HISTSIZE=99999
+HISTFILESIZE=99999
+
+#### set xterm ####
+TERM=xterm
+
+##### set slrn ####
+NNTPSERVER='news.gmane.org' && export NNTPSERVER
+
+####### Export settings #######
+export PATH HOME TER PS1 HISTSIZE HISTFILE PKG_PATH PAGER TERM
+
+

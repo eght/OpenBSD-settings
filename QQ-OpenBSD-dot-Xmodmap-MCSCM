@@ -1,0 +1,39 @@
+!!!!!!!!!!!!!!!!!!
+! Meta_L  Ctrl_L  Space  Ctrl_R  Meta_R
+!!!!!!!!!!!!!!!!!!
+
+remove mod1 = Alt_L   
+!!! Alt_L ===>>> Control_L
+
+remove mod1 = Alt_R   
+!!! Alt_R ===>>> Control_R
+
+remove mod4 = Super_L  
+!!! Super_L ===>>> Alt_L
+
+remove mod4 = Super_R   
+!!! Super_R ===>>> Alt_R
+
+add control = Alt_L   
+!!! Alt_L ===>>> Control_L
+
+add control = Alt_R   
+!!! Alt_R ===>>> Control_R
+
+add mod1 = Super_L  
+!!! Super_L ===>>> Alt_L
+
+add mod1 = Super_R  
+!!! Super_R ===>>> Alt_R
+
+keycode 64 = Control_L  
+!!! Alt_L ===>>> Control_L
+
+keycode 113 = Control_R  
+!!! Alt_R ===>>> Control_R
+
+keycode 115 = Alt_L   
+!!! Super_L ===>>> Alt_L
+
+keycode 116 = Alt_R   
+!!! Super_R ===>>> Alt_R
